@@ -1,0 +1,10 @@
+<section class="page-content">
+  <h1>Editar Cliente</h1>
+
+    <form action="/clientes/{{cliente.id}}/editar" method="POST" class="form-padrao">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{cliente.nome}}" required>
+        <button type="submit" class="btn-salvar">Salvar Alterações</button>
+        <a href="/clientes" class="btn-voltar"> Voltar</a>
+    </form>
+</section>

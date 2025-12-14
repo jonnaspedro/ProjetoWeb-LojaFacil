@@ -1,0 +1,106 @@
+<section class="page-content">
+  <h1>Fornecedores Cadastrados</h1>
+
+  <form action="/fornecedores" method="POST" class="form-fornecedor">
+    <input type="text" name="nome" placeholder="Nome do fornecedor" required>
+    <button type="submit" class="btn-adicionar">Adicionar Fornecedor</button>
+  </form>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each fornecedores}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{nome}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <a href="/" class="btn-voltar">Voltar</a>
+</section>
+
+<style>
+  .page-content {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .form-fornecedor {
+    margin-bottom: 40px;
+  }
+
+  input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+
+  .btn-adicionar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn-adicionar:hover {
+    background-color: #ffd369;
+    color: #000;
+    transform: translateY(-2px);
+  }
+
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 85%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  th, td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  th {
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  tr:hover td {
+    background-color: #fdf8e6;
+  }
+
+  .btn-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .btn-voltar:hover {
+    background-color: #ffd369;
+    color: #000;
+    transform: translateY(-2px);
+  }
+</style>

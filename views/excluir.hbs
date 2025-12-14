@@ -1,0 +1,17 @@
+<section class="page-content">
+  
+  <h1>Excluir Cliente</h1>
+
+    <div class="confirm-box">
+      <p>Tem certeza que deseja excluir o cliente <strong>{{cliente.nome}}</strong>?</p>
+
+        <form action="/clientes/{{cliente.id}}/excluir" method="post" style="display:inline;">
+          <button type="submit" style="background:#e74c3c;color:#fff;border:none;padding:5px 10px;border-radius:3px;cursor:pointer;">
+            Excluir
+          </button>
+        </form>
+        
+    </div>
+
+</section>
+
